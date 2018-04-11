@@ -96,3 +96,4 @@ And you'll see an output like:
 
 With an OpenCV image show window showing the stream (which should close when pressing ESC, or Control+C the shell).
 
+# pubCamOnRos
