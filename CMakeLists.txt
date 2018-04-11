@@ -13,6 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(OpenCV)
 
+
+
+
 catkin_package()
 
 include_directories(
@@ -20,8 +23,12 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
 )
 
-add_executable(video_stream src/video_stream.cpp)
-target_link_libraries(video_stream ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+
+
+
+    add_executable(video_stream src/video_stream.cpp )
+target_link_libraries(video_stream fastrtps fastcdr ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 install(TARGETS video_stream
     RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
